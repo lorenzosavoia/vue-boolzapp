@@ -55,12 +55,12 @@
                         </div>
                         <!-- barra di ricerca chat -->
                         <!-- lista delle chat -->
-                        <ul class="chat-list d-flex">
-                            <li class="chat-tab d-flex">
+                        <ul class="chat-list">
+                            <li v-for="element in contacts" class="chat-tab d-flex">
                                 <div class="profile-img d-flex">
-                                    <img src="img/avatar_1.jpg" alt="">
+                                    <img :src="`img/avatar${element.avatar}.jpg`" alt="">
                                     <div class="text-chat">
-                                        <h3 class="chat-name">Michele</h3>
+                                        <h3 class="chat-name">{{element.name}}</h3>
                                         <span class="chat-prev">ok...</span>
                                     </div>
                                 </div>

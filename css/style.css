@@ -3,3 +3,61 @@
     padding: 0;
     box-sizing: border-box;
 }
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.d-flex{
+    display: flex;
+}
+
+.color{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(#249687 0px,#249687 15vh,#DADBD4 15vh, #DADBD4 100%);
+    overflow: hidden;
+}
+.container{
+    width: 80%;
+    height: 90%;
+    margin: auto;
+    
+}
+.main{
+    height: 100%;
+    width: 70%;
+    background-color: blue;
+    
+}
+.nav{
+    height: 100%;
+    width: 30%;
+    background-color: yellow;
+    
+}
+.tab{
+    height: 70px;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #eaeaea;   
+}
+.profile-img{
+    align-items: center;
+}
+.userName{
+    margin-left: .3em ;
+}
+.profile-img img{
+    width: 50px;
+    margin-left: 1em;
+    border-radius: 50%;
+}
+
+.icon-box i{
+    margin-right: .7em;
+    cursor: pointer;
+    color: #b1b1b1;
+} 
+  

@@ -146,27 +146,75 @@ li{
 .main{
     height: 100%;
     width: 60%;
-    /* background-color: blue;  */
 }
+/* header profilo */
 .profile-header{
     height: 70px;
     width: 100%;
-}
-.main-chat{
-    height: calc(100% - 140px);
-    width: 100%;
-    background-image: url("../img/mine.jpg");
-    background-color: #cccccc;
-}
-.write-message{
-    height: 70px;
-    width: 100%;
-    background-color: white;
-    
 }
 .text-header-main span{
     color: #b6b9bb;
     font-size: .7em;
 }
+/* header profilo */
+/* main chat */
+.main-chat{
+    height: calc(100% - 140px);
+    width: 100%;
+    background-image: url("../img/mine.jpg");
+    background-color: #cccccc;
+    overflow: auto;
+}
+.message-box{
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 2em;
+}
+.message{
+    display: flex;
+    width: 40%;
+    /* height: 40px; */
+    border-radius: 1em;
+}
+.received{
+    background-color: white;
+}
+.sent{
+    margin-left: auto;
+    background-color: #d4f9ba;
+}
+.message span{
+    padding: 1em;
+}
+/* main chat */
+/* write message */
+.write-message{
+    height: 70px;
+    width: 100%;
+    background-color: #f2eeea;
+    align-items: center;
+    justify-content: space-around;
+    
+}
+.write-message i{
+    color: #9c9fa0;
+    font-size: 1.5em;
+}
+.write-message input{
+    width: 75%;
+    height: 80%;
+    border: none;
+    border-radius: 1em;
+    padding: 1em;
+}
+/* write message */
+
 /* main */
 
+.header-navbar{
+    height: 190px;
+}
+.chat-navbar{
+    height: calc(100% - 190px);
+    overflow: auto;
+}

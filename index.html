@@ -22,60 +22,88 @@
         <div id="app" class="container d-flex">
 
                     <div class="nav">
-                        <!-- il mio utente -->
-                        <div class="tab d-flex">
-                            <div class="profile-img d-flex">
-                                <img src="img/avatar_io.jpg" alt="">
-                                <h3 class="userName">Nome Utente</h3>
-                            </div>
-                            <div class="icon-box">
-                                <i class="fas fa-circle-notch"></i>
-                                <i class="fas fa-comment-alt"></i>
-                                <i class="fas fa-ellipsis-v"></i>
-                            </div>
-                        </div>
-                        <!-- il mio utente -->
-                        <!-- notifiche -->
-                        <div class="notification d-flex">
-                            <div class="bell-icon d-flex">
-                                <i class="fas fa-bell-slash"></i>
-                            </div>
-                            <div class="text-notification">
-                                <h4>Ricevi notifiche di nuovi messaggi</h4>
-                                <span>Attiva notifiche</span>
-                            </div>
-                        </div>
-                        <!-- notifiche -->
-                        <!-- barra di ricerca chat -->
-                        <div class="search-bar d-flex">
-                            <div class="bar d-flex">
-                                <i class="fas fa-search"></i>
-                                <input type="text" placeholder="Cerca o inizia una nuova chat">
-                            </div>
-                        </div>
-                        <!-- barra di ricerca chat -->
-                        <!-- lista delle chat -->
-                        <ul class="chat-list">
-                            <li v-for="element in contacts" class="chat-tab d-flex">
-                                <div class="profile-img d-flex">
-                                    <img :src="`img/avatar${element.avatar}.jpg`" alt="">
-                                    <div class="text-chat">
-                                        <h3 class="chat-name">{{element.name}}</h3>
-                                        <span class="chat-prev">ok...</span>
-                                    </div>
-                                </div>
-                                <div class="date">
-                                    <span>20 12 2021 10:22:21</span>
-                                </div>
-                            </li>
+                        <div class="header-navbar">
 
-                        </ul>
+                            <!-- il mio utente -->
+                            <div class="tab d-flex">
+                                <div class="profile-img d-flex">
+                                    <img src="img/avatar_io.jpg" alt="">
+                                    <h3 class="userName">Nome Utente</h3>
+                                </div>
+                                <div class="icon-box">
+                                    <i class="fas fa-circle-notch"></i>
+                                    <i class="fas fa-comment-alt"></i>
+                                    <i class="fas fa-ellipsis-v"></i>
+                                </div>
+                            </div>
+                            <!-- il mio utente -->
+                            <!-- notifiche -->
+                            <div class="notification d-flex">
+                                <div class="bell-icon d-flex">
+                                    <i class="fas fa-bell-slash"></i>
+                                </div>
+                                <div class="text-notification">
+                                    <h4>Ricevi notifiche di nuovi messaggi</h4>
+                                    <span>Attiva notifiche</span>
+                                </div>
+                            </div>
+                            <!-- notifiche -->
+                            <!-- barra di ricerca chat -->
+                            <div class="search-bar d-flex">
+                                <div class="bar d-flex">
+                                    <i class="fas fa-search"></i>
+                                    <input type="text" placeholder="Cerca o inizia una nuova chat">
+                                </div>
+                            </div>
+                            <!-- barra di ricerca chat -->
+                        </div>
+                        <!-- lista delle chat -->
+                        <div class="chat-navbar">
+                            <ul class="chat-list">
+                                <li v-for="element in contacts" class="chat-tab d-flex">
+                                    <div class="profile-img d-flex">
+                                        <img :src="`img/avatar${element.avatar}.jpg`" alt="">
+                                        <div class="text-chat">
+                                            <h3 class="chat-name">{{element.name}}</h3>
+                                            <span class="chat-prev">ok...</span>
+                                        </div>
+                                    </div>
+                                    <div class="date">
+                                        <span>20 12 2021 10:22:21</span>
+                                    </div>
+                                </li>
+    
+                            </ul>
+                            
+                        </div>
                         <!-- lista delle chat -->
 
                     </div>
 
 
                     <div class="main">
+                        <div class="profile-header">
+                            <div class="tab d-flex">
+                                <div class="profile-img d-flex">
+                                    <img src="img/avatar_io.jpg" alt="">
+                                    <div class="text-header-main">
+                                        <h2>Michele</h2>
+                                        <span>ultimo accesso oggi alle 16:15</span>
+                                    </div>
+                                </div>
+                                <div class="icon-box">
+                                    <i class="fas fa-search"></i>
+                                    <i class="fas fa-paperclip"></i>
+                                    <i class="fas fa-ellipsis-v"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="main-chat">
+
+                        </div>
+                        <div class="write-message">
+                            
+                        </div>
 
                     </div>
                 

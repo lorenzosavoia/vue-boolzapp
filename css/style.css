@@ -25,16 +25,11 @@ li{
 }
 .container{
     width: 80%;
-    height: 90%;
+    height: 90vh;
     margin: auto;
     
 }
-.main{
-    height: 100%;
-    width: 60%;
-    background-color: blue;
-    
-}
+
 .nav{
     height: 100%;
     width: 40%;
@@ -119,6 +114,9 @@ li{
 }
 /* barra di ricerca */
 /* lista delle chat */
+.chat-list{
+    height: 100%;
+}
 .chat-tab{
     background-color: white;
     width: 95%;
@@ -142,6 +140,33 @@ li{
     font-size: .7em;
     color: #b6b9bb;
 }
-
-
 /* lista delle chat */
+
+/* main */
+.main{
+    height: 100%;
+    width: 60%;
+    /* background-color: blue;  */
+}
+.profile-header{
+    height: 70px;
+    width: 100%;
+}
+.main-chat{
+    height: calc(100% - 140px);
+    width: 100%;
+    background-image: url("../img/mine.jpg");
+    background-color: #cccccc;
+}
+.write-message{
+    height: 70px;
+    width: 100%;
+    background-color: white;
+    
+}
+.text-header-main span{
+    color: #b6b9bb;
+    font-size: .7em;
+}
+/* main */
+

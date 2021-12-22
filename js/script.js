@@ -86,7 +86,34 @@ const app = new Vue({
                     },
                 ],
             },
-        ]
-    }
+        ],
+        counter: 0,
+        
+    },
+    created() {
+    //    console.log(this.contacts[0].messages);
+    },
+
+    methods:{
+        getLastDate: function(index){
+            let lastMessage = this.contacts[index].messages.length - 1;
+            let dateMessage = this.contacts[index].messages[lastMessage].date;
+            return dateMessage
+        },
+        getLastText: function(index){
+            let lastMessage = this.contacts[index].messages.length - 1;
+            let textMessage = this.contacts[index].messages[lastMessage].text;
+            return textMessage
+        },
+        getLastStatus: function(index){
+            let lastMessage = this.contacts[index].messages.length - 1;
+            let statusMessage = this.contacts[index].messages[lastMessage].status;
+            return statusMessage
+        },
+        showChat: function(index){
+            this.counter = index;
+        }
+        
+    },
 })
 

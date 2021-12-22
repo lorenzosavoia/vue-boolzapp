@@ -21,109 +21,115 @@
 
         <div id="app" class="container d-flex">
 
-                    <div class="nav">
-                        <div class="header-navbar">
+            <div class="nav">
+                <div class="header-navbar">
 
-                            <!-- il mio utente -->
-                            <div class="tab d-flex">
-                                <div class="profile-img d-flex">
-                                    <img src="img/avatar_io.jpg" alt="">
-                                    <h3 class="userName">Nome Utente</h3>
-                                </div>
-                                <div class="icon-box">
-                                    <i class="fas fa-circle-notch"></i>
-                                    <i class="fas fa-comment-alt"></i>
-                                    <i class="fas fa-ellipsis-v"></i>
-                                </div>
-                            </div>
-                            <!-- il mio utente -->
-                            <!-- notifiche -->
-                            <div class="notification d-flex">
-                                <div class="bell-icon d-flex">
-                                    <i class="fas fa-bell-slash"></i>
-                                </div>
-                                <div class="text-notification">
-                                    <h4>Ricevi notifiche di nuovi messaggi</h4>
-                                    <span>Attiva notifiche</span>
-                                </div>
-                            </div>
-                            <!-- notifiche -->
-                            <!-- barra di ricerca chat -->
-                            <div class="search-bar d-flex">
-                                <div class="bar d-flex">
-                                    <i class="fas fa-search"></i>
-                                    <input type="text" placeholder="Cerca o inizia una nuova chat">
-                                </div>
-                            </div>
-                            <!-- barra di ricerca chat -->
+                    <!-- il mio utente -->
+                    <div class="tab d-flex">
+                        <div class="profile-img d-flex">
+                            <img src="img/avatar_io.jpg" alt="">
+                            <h3 class="userName">Michela Savoia</h3>
                         </div>
-                        <!-- lista delle chat -->
-                        <div class="chat-navbar">
-                            <ul class="chat-list">
-                                <li v-for="element in contacts" class="chat-tab d-flex">
-                                    <div class="profile-img d-flex">
-                                        <img :src="`img/avatar${element.avatar}.jpg`" alt="">
-                                        <div class="text-chat">
-                                            <h3 class="chat-name">{{element.name}}</h3>
-                                            <span class="chat-prev">ok...</span>
-                                        </div>
-                                    </div>
-                                    <div class="date">
-                                        <span>20 12 2021 10:22:21</span>
-                                    </div>
-                                </li>
-    
-                            </ul>
-                            
+                        <div class="icon-box">
+                            <i class="fas fa-circle-notch"></i>
+                            <i class="fas fa-comment-alt"></i>
+                            <i class="fas fa-ellipsis-v"></i>
                         </div>
-                        <!-- lista delle chat -->
-
                     </div>
-
-
-                    <div class="main">
-                        <!-- header profilo main -->
-                        <div class="profile-header">
-                            <div class="tab d-flex">
-                                <div class="profile-img d-flex">
-                                    <img src="img/avatar_1.jpg" alt="">
-                                    <div class="text-header-main">
-                                        <h2>Michele</h2>
-                                        <span>ultimo accesso oggi alle 16:15</span>
-                                    </div>
-                                </div>
-                                <div class="icon-box">
-                                    <i class="fas fa-search"></i>
-                                    <i class="fas fa-paperclip"></i>
-                                    <i class="fas fa-ellipsis-v"></i>
-                                </div>
-                            </div>
+                    <!-- il mio utente -->
+                    <!-- notifiche -->
+                    <div class="notification d-flex">
+                        <div class="bell-icon d-flex">
+                            <i class="fas fa-bell-slash"></i>
                         </div>
-                        <!-- header profilo main -->
-                        <!-- main chat -->
-                        <div class="main-chat">
-                            <div class="message-box">
-
-                                <div class="message received">
-                                    <span>La marianna va in campagna</span>
-                                </div>
-                                <div class="message sent">
-                                    <span>Vengo anche io</span>
-                                </div>
-                                <div class="message received">
-                                    <span>No tu no</span>
-                                </div>
-                            </div>
+                        <div class="text-notification">
+                            <h4>Ricevi notifiche di nuovi messaggi</h4>
+                            <span>Attiva notifiche</span>
                         </div>
-                        <!-- main chat -->
-                        <!-- write message -->
-                        <div class="write-message d-flex">
-                            <i class="far fa-smile"></i>
-                            <input type="text" placeholder="Scrivi un messaggio">
-                            <i class="fas fa-microphone"></i>
-                        </div>
-                        <!-- write message -->
                     </div>
+                    <!-- notifiche -->
+                    <!-- barra di ricerca chat -->
+                    <div class="search-bar d-flex">
+                        <div class="bar d-flex">
+                            <i class="fas fa-search"></i>
+                            <input type="text" placeholder="Cerca o inizia una nuova chat">
+                        </div>
+                    </div>
+                    <!-- barra di ricerca chat -->
+                </div>
+                <!-- lista delle chat -->
+                <div class="chat-navbar">
+                    <ul class="chat-list">
+                        <li 
+                        v-for="(contact, index) in contacts" class="chat-tab d-flex"
+                         @click="showChat(index)"
+                         >
+                            <div class="profile-img d-flex">
+                                <img :src="`img/avatar${contact.avatar}.jpg`" alt="">
+                                <div class="text-chat">
+                                    <h3 class="chat-name">{{contact.name}}</h3>
+                                    <span class="chat-prev">{{getLastText(index)}}</span>
+                                </div>
+                            </div>
+                            <div class="date">
+                                <span>{{getLastDate(index)}}</span>
+                            </div>
+                        </li>
+
+                    </ul>
+                    
+                </div>
+                <!-- lista delle chat -->
+
+            </div>
+
+
+            <div class="main">
+                <!-- header profilo main -->
+                <div class="profile-header">
+                    <div 
+                        class="tab d-flex"
+                        
+                    >
+                        <div class="profile-img d-flex">
+                            <img :src="`img/avatar${contacts[counter].avatar}.jpg`" alt="">
+                            <div class="text-header-main">
+                                <h2>{{contacts[counter].name}}</h2>
+                                <span>ultimo accesso oggi alle 16:15</span>
+                            </div>
+                        </div>
+                        <div class="icon-box">
+                            <i class="fas fa-search"></i>
+                            <i class="fas fa-paperclip"></i>
+                            <i class="fas fa-ellipsis-v"></i>
+                        </div>
+                    </div>
+                </div>
+                <!-- header profilo main -->
+                <!-- main chat -->
+                <div class="main-chat">
+                    <div class="message-box" >
+
+                        <div 
+                        class="message"
+                        :class="(message.status == 'received' ? 'received' : 'sent')"
+                        v-for="(message, index) in contacts[counter].messages"
+                        >
+                            <span class="message-text">{{message.text}}</span>
+                            <span class="date-message">{{message.date}}</span>
+                        </div>
+                        
+                    </div>
+                </div>
+                <!-- main chat -->
+                <!-- write message -->
+                <div class="write-message d-flex">
+                    <i class="far fa-smile"></i>
+                    <input type="text" placeholder="Scrivi un messaggio">
+                    <i class="fas fa-microphone"></i>
+                </div>
+                <!-- write message -->
+            </div>
                 
             
         </div>

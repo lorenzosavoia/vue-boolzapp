@@ -146,7 +146,6 @@ li{
     color: #b6b9bb;
 }
 /* lista delle chat */
-
 /* main */
 .main{
     height: 100%;
@@ -156,6 +155,13 @@ li{
 .profile-header{
     height: 70px;
     width: 100%;
+}
+.header-navbar{
+    height: 190px;
+}
+.chat-navbar{
+    height: calc(100% - 190px);
+    overflow: auto;
 }
 .text-header-main span{
     color: #b6b9bb;
@@ -184,9 +190,6 @@ li{
 }
 .date-message{
     font-size: .5em;
-}
-.message-text{
-    
 }
 .received{
     background-color: white;
@@ -220,13 +223,4 @@ li{
     padding: 1em;
 }
 /* write message */
-
 /* main */
-
-.header-navbar{
-    height: 190px;
-}
-.chat-navbar{
-    height: calc(100% - 190px);
-    overflow: auto;
-}

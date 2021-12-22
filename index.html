@@ -18,12 +18,10 @@
 </head>
 <body>
     <div class="color">
-
         <div id="app" class="container d-flex">
-
+            <!-- nav bar -->
             <div class="nav">
                 <div class="header-navbar">
-
                     <!-- il mio utente -->
                     <div class="tab d-flex">
                         <div class="profile-img d-flex">
@@ -75,22 +73,17 @@
                                 <span>{{getLastDate(index)}}</span>
                             </div>
                         </li>
-
                     </ul>
-                    
                 </div>
                 <!-- lista delle chat -->
-
             </div>
+            <!-- nav bar -->
 
-
+            <!-- main -->
             <div class="main">
                 <!-- header profilo main -->
                 <div class="profile-header">
-                    <div 
-                        class="tab d-flex"
-                        
-                    >
+                    <div class="tab d-flex">
                         <div class="profile-img d-flex">
                             <img :src="`img/avatar${contacts[counter].avatar}.jpg`" alt="">
                             <div class="text-header-main">
@@ -109,7 +102,6 @@
                 <!-- main chat -->
                 <div class="main-chat">
                     <div class="message-box" >
-
                         <div 
                         class="message"
                         :class="(message.status == 'received' ? 'received' : 'sent')"
@@ -118,7 +110,6 @@
                             <span class="message-text">{{message.text}}</span>
                             <span class="date-message">{{message.date}}</span>
                         </div>
-                        
                     </div>
                 </div>
                 <!-- main chat -->
@@ -130,12 +121,9 @@
                 </div>
                 <!-- write message -->
             </div>
-                
-            
+            <!-- main --> 
         </div>
     </div>
-    
-
     <!-- script -->
     <script src="js/script.js"></script>
     <!-- script -->

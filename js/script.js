@@ -88,12 +88,10 @@ const app = new Vue({
             },
         ],
         counter: 0,
-        
     },
     created() {
-    //    console.log(this.contacts[0].messages);
+    
     },
-
     methods:{
         getLastDate: function(index){
             let lastMessage = this.contacts[index].messages.length - 1;
@@ -112,8 +110,7 @@ const app = new Vue({
         },
         showChat: function(index){
             this.counter = index;
-        }
-        
+        } 
     },
 })
 

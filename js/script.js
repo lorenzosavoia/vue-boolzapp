@@ -88,6 +88,7 @@ const app = new Vue({
             },
         ],
         counter: 0,
+        newMessage: '',
     },
     created() {
     
@@ -110,7 +111,25 @@ const app = new Vue({
         },
         showChat: function(index){
             this.counter = index;
+        },
+        sendMessage: function() {
+            let messagesArray = this.contacts[this.counter].messages;
+            if (this.newMessage.trim() != "") {
+                messagesArray.push({
+                    text: this.newMessage,
+                    date: 10/10/2021,
+                    status: "sent",
+                });
+            };
+            this.newMessage = '';
         } 
     },
+    
+    // rmvMessage: function (index) {
+    //     // prendo l'array dei messaggi e tolgo quello selezionato
+    //     let messagesArray = this.contacts[this.counter].messages;
+    //     messagesArray.splice(index, 1);
+    // },
+    
 })
 
